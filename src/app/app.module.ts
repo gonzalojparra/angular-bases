@@ -3,14 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+// Cuando querramos trabajar en éste módulo lo vamos a trabajar directamente en ese módulo y no en 'app.module.ts'
+import { HeroesModule } from './heroes/heroes.module';
+import { ContadorModule } from './contador/contador.module';
+
+
 @NgModule({
-  declarations: [
-    AppComponent
+  // Componentes
+  declarations: [ 
+    AppComponent,
   ],
-  imports: [
-    BrowserModule
+  // Otros módulos
+  imports: [ 
+    BrowserModule,
+    HeroesModule,
+    ContadorModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  // Servicios específicos a un módulo
+  providers: [], 
+  // Componente principal
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
